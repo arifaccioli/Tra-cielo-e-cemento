@@ -1,0 +1,123 @@
+.rectangle {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 100px; /* Spostato verso il basso di 72px */
+  width: 185px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il rettangolo verde inferiore */
+.rectangle-2 {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 130px; /* Spostato verso il basso di 72px */
+  width: 565px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il titolo "Interspecie" */
+.interspecie {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  left: 100px; /* Margine sinistro */
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  top: 102px; /* Margine superiore */
+  width: 800px; /* Larghezza del testo */
+  z-index: 1; /* Posiziona sopra ai rettangoli */
+}
+.footer {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  width: 800px;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 1;
+  line-height: normal;
+}
+
+
+/* Stile per il testo principale */
+.frame .text-wrapper {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  left: 100px; /* Spostato il testo a 72px */
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 200px; /* Spostato verso il basso di 72px */
+  width: 800px; /* Larghezza uguale a quella del titolo */
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il link "Entra nel sito" */
+.frame .text-wrapper-2 {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  left: 100px; /* Spostato il testo a 72px */
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 600px; /* Spostato verso il basso di 72px */
+  width: 210px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+.frame .text-wrapper-2 a {
+  color: #000000;  /* Colore del testo (nero) */
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: transparent;  /* Nessun riempimento di default */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.frame .text-wrapper-2 a:hover {
+  background-color: #00fb10;  /* Riempimento verde al passaggio del mouse */
+  color: #000000;  /* Colore del testo bianco al passaggio del mouse */
+}
+
+/* Rimuove il colore viola predefinito del link quando è attivo o in focus */
+.frame .text-wrapper-2 a:focus,
+.frame .text-wrapper-2 a:active {
+  color: #000000;  /* Mantieni il colore del testo nero */
+  background-color: transparent;  /* Rimuovi il riempimento verde quando cliccato */
+
+}
+
+/* Modifiche per il cursore */
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0; /* Assicurati che il cursore parta sempre dall'angolo */
+  z-index: -1; /* Cursore sotto gli altri elementi */
+}
+
+/* Stile per le immagini in movimento */
+.image-tile {
+  width: 124px;
+  height: 124px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}

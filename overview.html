@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PicArrange</title>
+  <link rel="stylesheet" href="overview_style.css" />
+</head>
+<body>
+  <!-- Titolo fisso sopra le immagini -->
+  <div class="frame">
+    <div class="div">
+      <div class="group">
+        <div class="overlap-group">
+          <div class="rectangle"></div>
+          <!-- Link alla pagina home.html -->
+          <a href="index.html" class="interspecie-link">
+            <div class="interspecie">Tra cielo e cemento</div>
+          </a>
+          <div class="rectangle-2"></div>
+          <!-- Link alla pagina home.html per il secondo testo -->
+          <a href="index.html" class="interspecie-link">
+            <div class="interspecie" style="top: 130px;">
+              Stratificazione ambientale del Parco Regionale del Fiume Sile
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottoni filtro -->
+  <div class="filter-bar">
+    <button class="category-button" data-category="Animalia">Animalia</button>
+    <button class="category-button" data-category="Plantae">Plantae</button>
+    <button class="category-button" data-category="Fungi">Fungi</button>
+    <button class="category-button" data-category="minaccia">Minacciate</button>
+    <button class="category-button" data-category="autoctona">Autoctone</button>
+    <button class="category-button" data-category="alloctona">Alloctone</button>
+  </div>
+
+  <!-- Griglia immagini -->
+  <div id="image-grid"></div>
+  <div id="minimap">
+  <div id="minimap-viewport"></div>
+</div>
+  <!-- Popup info -->
+  <div id="popup" class="popup">
+    <img id="popup-img" src="" alt="Preview">
+    <div id="popup-info"></div>
+  </div>
+
+  <script src="overview_script.js"></script>
+</body>
+</html>

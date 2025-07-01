@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: transparent;
+}
+  
+/* Contenitore del titolo */
+.group {
+  position: fixed; /* Fissa il titolo sopra le immagini */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200; /* Posiziona sopra le immagini */
+  pointer-events: none; /* Evita che interferisca con il mouse */
+}
+.credits {
+  position: relative;
+  z-index: 50;
+}
+
+/* Sovrapposizione del gruppo */
+.overlap-group {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.rectangle {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 100px; /* Spostato verso il basso di 72px */
+  width: 185px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il rettangolo verde inferiore */
+.rectangle-2 {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 130px; /* Spostato verso il basso di 72px */
+  width: 565px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il titolo "Interspecie" */
+.interspecie {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  left: 100px; /* Margine sinistro */
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  top: 102px; /* Margine superiore */
+  width: 800px; /* Larghezza del testo */
+  z-index: 1; /* Posiziona sopra ai rettangoli */
+}
+
+
+.interspecie-link {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Mantiene il colore originale del testo */
+
+}
+#image-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  background-color: transparent;
+}
+
+.image-row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.image-item {
+  position: relative;
+  width: calc(100vw / 20);
+  padding-bottom: calc(100vw / 20);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.image-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out; /* Durata e tipo di transizione */
+  opacity: 0; /* Inizia invisibile */
+  transition: opacity 0.7s ease, transform 0.2s ease; /* Transizione fluida */
+}
+.image-item img.fade-in {
+  opacity: 1; /* Diventa visibile */
+  transform: scale(1); /* Ritorna alla dimensione normale */
+}
+/* Stile per il messaggio */
+#categoryMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 29px; /* Altezza del rettangolo */
+  z-index: 100;
+  text-align: center;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #000; /* Colore del testo */
+  display: none;
+}
+
+/* Contenitore del messaggio */
+#categoryMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent; /* Sfondo trasparente per il contenitore */
+  padding: 0;
+  z-index: 100;
+  text-align: center;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #000; /* Colore del testo */
+  display: none;
+  
+}
+
+/* Stile per ogni riga del messaggio */
+#categoryMessage .message-line {
+  position: relative;
+  background-color: #00fb10; /* Rettangolo verde */
+  height: 29px; /* Altezza del rettangolo */
+  line-height: 29px; /* Allinea il testo verticalmente */
+  margin-bottom: 5px; /* Spaziatura tra le righe */
+  padding: 0 10px; /* Spaziatura interna ai lati */
+  display: flex;
+  align-items: center; /* Centra il testo verticalmente */
+  justify-content: center; /* Centra il testo orizzontalmente */
+
+}
+.highlight {
+  background-color: #00fb10; /* verde chiaro */
+  padding: 0.1em 0.2em;
+
+}
+
+
+/* Stile per il pulsante "Continua" */
+#continueBtn {
+  background-color: #000;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+#continueBtn:hover {
+  background-color: #333;
+}

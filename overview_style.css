@@ -1,0 +1,192 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('librofont/Arial-Narrow.woff2') format('woff2'),
+       url('librofont/Arial-Narrow.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'generic';
+  src: url('librofont/Generic-G20-FR-Classic-DEMO.otf') format('opentype');
+}
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Narrow', sans-serif;
+    background-color: #ffff;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+
+.filter-bar {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  display: flex;
+  gap: 30px;
+  z-index: 100;
+}
+
+.category-button {
+  font-family: 'Arial Narrow', sans-serif;
+  font-size: 26px;
+  color: #000000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-color: #00fb10; /* verde */
+
+}
+
+.category-button:hover {
+  background-color: #00fb10; /* verde */
+  transform: scale(1.1);
+
+}
+
+#image-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.image-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+
+}
+.image-item:hover img {
+  transform: scale(1.5);
+}
+
+.blurred {
+  filter: blur(10px);
+  opacity:0.4;
+  transition: all 0.3s ease;
+
+}
+
+.popup {
+  position: fixed;
+  width: 422px;
+  height: 422px;
+  color: #000000;
+  font-family: 'arial narrow', sans-serif;
+  font-size: 20px;
+  display: none;
+  padding: 10px;
+  z-index: 200;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  display: block;
+  opacity: 1;
+}
+
+.popup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.highlight {
+  background-color: #00fb10; /* verde chiaro */
+  padding: 0.1em 0.2em;
+}
+/* Stile per il rettangolo verde superiore */
+.rectangle {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 100px; /* Spostato verso il basso di 72px */
+  width: 185px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il rettangolo verde inferiore */
+.rectangle-2 {
+  background-color: #00fb10;
+  height: 29px;
+  left: 100px; /* Spostato il rettangolo a 72px */
+  position: fixed;
+  top: 130px; /* Spostato verso il basso di 72px */
+  width: 565px;
+  z-index: 1; /* Posiziona sopra al cursore */
+}
+
+/* Stile per il titolo "Interspecie" */
+.interspecie {
+  color: #000000;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  left: 100px; /* Margine sinistro */
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  top: 102px; /* Margine superiore */
+  width: 800px; /* Larghezza del testo */
+  z-index: 1; /* Posiziona sopra ai rettangoli */
+}
+.interspecie-link {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Mantiene il colore originale del testo */
+
+}
+
+.interspecie-link:hover {
+  background-color: #00e60c; /* Stesso colore hover dei bottoni */
+  color: #fff; /* Cambia il colore del testo in bianco */
+  padding: 5px; /* Aggiunge un po' di spazio interno */
+  border-radius: 5px; /* Aggiunge angoli arrotondati */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transizione fluida */
+  background-color: #333;
+
+}
+.frame, .div, .group, .overlap-group {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
